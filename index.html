@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>something</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="log_in_container" id="log_in_container"></div>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="./images/bank of georgia.jpg" alt="logo" />
+          </span>
+          <div class="text header-text">
+            <span class="name">BOG</span>
+            <span class="profession">საქართველოს ბანკი</span>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">მთავარი</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="text nav-text"> ბიზნესი </span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-bell icon"></i>
+                <span class="text nav-text">კონტაქტი</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-pie-chart-alt icon"></i>
+                <span class="text nav-text">ვალუტის კურსები</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-heart icon"></i>
+                <span class="text nav-text">ფიზიკური პირი</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text" onclick="valute()">ვალუტა</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icon" onclick="log_in()"></i>
+              <span class="text nav-text" onclick="log_in()">შესვლა</span>
+            </a>
+          </li>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">შავი ფონი</span>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <!-- ვალუტის კურსები ყველა -->
+    <div class="main_container">
+      <div class="main_container_box_all_curse">
+        <div class="course">
+          <header>
+            <h1>ვალუტის კურსები</h1>
+          </header>
+          <div class="valute_box"></div>
+        </div>
+      </div>
+      <div class="main_container_box_calculate">
+        <div class="valute_container_calculator">
+          <header>
+            <h2>ვალუტის კალკულატორი</h2>
+          </header>
+          <div class="valute_box_calculator">
+            <div id="input_container">
+              <input
+                placeholder="თანხა"
+                class="inputValue"
+                type="number"
+                id="inputValueFirst"
+              />
+              <select class="valute_select" id="optionValue">
+                <option disabled selected value="default">საიდან</option>
+              </select>
+              <select class="valute_select" id="optionValue1">
+                <option disabled selected value="default">სად</option>
+              </select>
+              <div class="valutecount valute_select" id="convert_count">
+                <h5>დააკონვერტირე</h5>
+              </div>
+            </div>
+            <div class="button" onclick="button()">
+              <button>კონვერტაცია</button>
+            </div>
+          </div>
+          <div class="valute_box_calculator_button"></div>
+        </div>
+      </div>
+      <div class="main_container_box_curse">
+        <header class="allCurse">
+          <h1>ვალუტის ყველა კურსი</h1>
+        </header>
+        <div id="container_for_all_course"></div>
+      </div>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
